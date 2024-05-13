@@ -1,1 +1,16 @@
 4/0AdLIrYfAorQMif0T4JhTkqV4G4O1kupNshWMayX5mUO4j18vVU-CNUZgo8lK0UKv78pP5g
+
+
+{
+  "type": "service_account",
+  "project_id": "pekao-prj-preprod-omni-app-01",
+  "private_key_id": "462348b7d8b9f422e71c6474367fedeae2bbeb98",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDUEgpFSj8q+1Fd\nwYoJtg0N+gPMO04VeosxR20GrrgLVwa5t3/p1W/RxconmGeDD/HKIGKl+Rm8eJLj\nj98W5h89/xyIprweuBlkXU9V+ozUNJmYPK/8O6TUc1tQUDy5CXvaTORI14ODL4TH\n0FI+q5oErUjMmsX7Ixz93QplLTDjSrfm4ZwQICtMQdTsp2ZLzy2th1zCxnXBL7rv\nrG0pl5qVBSYNQRH7aJBHnnHkfDn7FFC9COUQXlrg6OubBl9h1c5SEk5beZiSzxWD\nu/olu5CByVOsLQBZkhrvfMq9MqkzlaRNHvdY5ZJhDJyVwQ1ZQt9snHFVc+IHL4im\nyc5ZETPbAgMBAAECggEAYJEoaR3ifr168xDmvP5Pmn4uzYhxyXkIOfPW0xSrTMqf\njuDel8lvhhulLnuJIxaXGN2/Xel8zSQwavv/74rxTgdFZHpcLjbRpTCSKEoTZ6ve\nBwMXdelo6K7wtTUcOXv2kFS0HPE5+vof4ebcFJqKYzfO7xBJN87o7DaDfcfiu5Rd\nwwSJs8twLrXmC5FpNOtzs2c8Xt51o0o7ICm/aZnpIcfST5X3po0qhrYmx7bdYOHq\njl4mVbarTkKURybu0KfR5Vy57HbQ+zm0fUeRUI3Q9AFYApwjR615ES35kI1EEdJS\nUe5azaA8SodoS0xjTQbD3RDwPRpbbDyD+U7fwpm2iQKBgQDuAlrrXYVC3qdJnP4f\njEnQPzbHwaoxd4tjOYfl/CiCyaNWbkItHaEg0t62t2q6AELgnhYqwsOXwDEGSVLl\naS5z01GVNwHwGJwA/7WZaneGWdH7sGio3gZxTKB0mJtQ/bSA9MdZ7jqMoiY2BxVc\nJ3bbx5mJBngcuVQEp+d3BmShaQKBgQDkGcCZ1V4kqyCHDWOwyFNGWzliP+Ah35a1\nQVc3i7dO1f+KbKjin3ejgrnTNIjasaNHPhX7rQARfM7hlefoYOJRBM06X7u6WrPT\npofqKzd3z4d7StzP/j04TT5w4I/XfKtJQDA3e/775CQrse9OV6gxIOf6MsgBG4DD\nYxOWxM8+owKBgCc/XizHvCzduGpMKB+dq6JaejcQeXc0xlhzaTSEk02V4IhlICZ+\nZ06ZVz58Gm5Xkq+lgfRFL6m7eJoXx0KrSIyzARYA/yHPfRIxGIoW42TVNOozGd8W\n1asjPqZbb+k4HObS9nie7yq3pmNsYZpTq6bsUCYnWfEqom8uHN4kwL1ZAoGBAK0z\n8M/e+NGXL+fc/unp83HlKzmzjxmpkeKobvW6ncK7NIOD5unOdSYvybLanWCSqo0a\nU877mqWsw9r/3UzS5Ibown2k3AOxhAMe3O2vSzsq1pGEUw+M2ie6X8OOgSr7e4Tv\nvK0k9oWGwwB66F/wp8JGXl/Z140fuTKkNOezIjtJAoGAV2lMccSOBogMs5IMnJhw\ncNkQmcwtEQ0r60EoEHWVY6fzJgwmUDkarM+OLfNSDlWWeD1LleM9x3zgNekAphKI\nnOas8p/KbhpWCDBoD3S5zqJ+ooC3v9PaH9ruN/ZBzN/Uj66aQnrpnbSeRyWGvzAa\nXd0aQ0tgAFdEZL9n3GXsxcI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "sa-preprod-omni-audit@pekao-prj-preprod-omni-app-01.iam.gserviceaccount.com",
+  "client_id": "100472835059174498758",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sa-preprod-omni-audit%40pekao-prj-preprod-omni-app-01.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
