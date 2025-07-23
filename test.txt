@@ -1,1 +1,68 @@
+provider "google" {
+  project = "your-project-id"
+  region  = "europe-central2"
+}
+
+resource "google_compute_vpn_gateway" "classic_vpn_gw" {
+  name    = "classic-vpn-gateway"
+  network = "my-vpc"
+  region  = "europe-central2"
+}
+
+resource "google_compute_address" "vpn_static_ip" {
+  name   = "vpn-static-ip"
+  region = "europe-central2"
+}
+
+resource "google_compute_vpn_tunnel" "policy_based_tunnel" {
+  name                  = "classic-vpn-tunnel"
+  region                = "europe-central2"
+  target_vpn_gateway    = google_compute_vpn_gateway.classic_vpn_gw.id
+  peer_ip               = "203.0.113.1"
+  shared_secret         = "my-pre-shared-key"
+  ike_version           = 2
+  local_traffic_selector = ["10.10.0.0/16"]
+  remote_traffic_selector = ["192.168.0.0/16"]
+
+  depends_on = [
+    google_compute_forwarding_rule.esp_rule,
+    google_compute_forwarding_rule.udp500_rule,
+    google_compute_forwarding_rule.udp4500_rule
+  ]
+}
+
+resource "google_compute_forwarding_rule" "esp_rule" {
+  name        = "vpn-esp"
+  region      = "europe-central2"
+  ip_protocol = "ESP"
+  ip_address  = google_compute_address.vpn_static_ip.address
+  target      = google_compute_vpn_gateway.classic_vpn_gw.self_link
+}
+
+resource "google_compute_forwarding_rule" "udp500_rule" {
+  name        = "vpn-udp500"
+  region      = "europe-central2"
+  ip_protocol = "UDP"
+  port_range  = "500"
+  ip_address  = google_compute_address.vpn_static_ip.address
+  target      = google_compute_vpn_gateway.classic_vpn_gw.self_link
+}
+
+resource "google_compute_forwarding_rule" "udp4500_rule" {
+  name        = "vpn-udp4500"
+  region      = "europe-central2"
+  ip_protocol = "UDP"
+  port_range  = "4500"
+  ip_address  = google_compute_address.vpn_static_ip.address
+  target      = google_compute_vpn_gateway.classic_vpn_gw.self_link
+}
+
+resource "google_compute_route" "vpn_route" {
+  name                   = "route-to-onprem-via-vpn"
+  network                = "my-vpc"
+  destination_range      = "192.168.0.0/16"
+  priority               = 200  # wyższy priorytet = niższa preferencja (BGP zwykle ma 100)
+  next_hop_vpn_tunnel    = google_compute_vpn_tunnel.policy_based_tunnel.id
+  next_hop_vpn_tunnel_region = "europe-central2"
+}
 
